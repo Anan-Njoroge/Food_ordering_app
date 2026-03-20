@@ -1,7 +1,7 @@
-A simple food ordering app:
- Folder structure
+# A simple food ordering app:
+ ## Folder structure
 
- food-app/
+``` food-app/
 │
 ├── assets/                # Client-side static files
 │   ├── css/
@@ -27,14 +27,15 @@ A simple food ordering app:
 ├── menu.php               # Full Menu Page (Browse all items)
 ├── orders.php             # User's Personal Order History
 ├── login.php              # Login Screen
-└── signup.php             # Account Creation Screen
+└── signup.php             # Account Creation Screen 
+```
 
 <!-- Paul Mutavuta -->
-1. The Project Architecture
+# 1. The Project Architecture
 We are building a Mobile-First food ordering app. The frontend uses Vanilla JavaScript (AJAX/Fetch) to communicate with the backend. To keep our work clean, we are using the following folder structure:
 
-Plaintext
-food-app/
+## Plaintext
+``` food-app/
 │
 ├── assets/                # Client-side static files (Frontend)
 │   ├── css/
@@ -60,31 +61,34 @@ food-app/
 ├── orders.php             # Order History (Dynamic)
 ├── login.php              # Login UI
 └── signup.php             # Registration UI
-2. Database Schema (MySQL)
+
+```
+# 2. Database Schema (MySQL)
 Please initialize the database with these three core tables. Use Prepared Statements for all queries to prevent SQL injection.
 
-users: id (INT), name (VARCHAR), email (UNIQUE), password (HASHED), created_at (TIMESTAMP).
 
-menu: id, name, description, price, image_url, category, created_at.
+## users: id (INT), name (VARCHAR), email (UNIQUE), password (HASHED), created_at (TIMESTAMP).
+
+## menu: id, name, description, price, image_url, category, created_at.
 
 orders: id, user_id, total_price, status (pending/delivered), created_at.
 
-3. Implementation Rules
-🔑 Authentication
+# 3. Implementation Rules
+## 🔑 Authentication
 Sign-Up: Hash passwords using password_hash($pass, PASSWORD_DEFAULT).
 
 Login: Use password_verify() and start a session.
 
 Session Keys: Store $_SESSION['user_id'] and $_SESSION['user_name'] upon successful login.
 
-📡 Data Exchange (JSON)
+## 📡 Data Exchange (JSON)
 Since I am using AJAX for the frontend, the files in your actions/ folder must return JSON responses instead of redirecting with header().
 
 Success Example: echo json_encode(['success' => true, 'user' => $name]);
 
 Error Example: echo json_encode(['success' => false, 'message' => 'Invalid email']);
 
-4. Immediate Tasks
+# 4. Immediate Tasks
 Set up config/db.php so I can start testing database pings.
 
 Code actions/signup_process.php: I have built the form with input names name, email, and password.
