@@ -1,41 +1,13 @@
 # A simple food ordering app:
  ## Folder structure
 
-``` food-app/
-│
-├── assets/                # Client-side static files
-│   ├── css/
-│   │   └── style.css      # Custom styling for all pages
-│   ├── js/
-│   │   ├── auth.js        # JS for Login/Signup validation & AJAX
-│   │   └── app.js         # JS for Add to Cart & Placing Orders
-│   └── img/               # Food thumbnails (pizza.jpg, burger.png)
-│
-├── config/                
-│   └── db.php             # Database connection (mysqli)
-│
-├── includes/              # Reusable UI components
-│   ├── header.php         # Navbar (Home, Menu, My Orders, Logout)
-│   └── footer.php         # Copyright & Script tags
-│
-├── actions/               # Pure PHP Logic (The "Engine")
-│   ├── signup_process.php # Handles creating new accounts
-│   ├── login_process.php  # Handles authentication & Sessions
-│   └── place_order.php    # Handles inserting orders into DB
-│
-├── index.php              # Home Page (The "Home Feed" with new/featured food)
-├── menu.php               # Full Menu Page (Browse all items)
-├── orders.php             # User's Personal Order History
-├── login.php              # Login Screen
-└── signup.php             # Account Creation Screen 
-```
-
 <!-- Paul Mutavuta -->
 # 1. The Project Architecture
 We are building a Mobile-First food ordering app. The frontend uses Vanilla JavaScript (AJAX/Fetch) to communicate with the backend. To keep our work clean, we are using the following folder structure:
 
 ## Plaintext
-``` food-app/
+``` 
+food-app/
 │
 ├── assets/                # Client-side static files (Frontend)
 │   ├── css/
